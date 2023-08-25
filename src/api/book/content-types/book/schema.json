@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "websiteUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "unique": false
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "books"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 1
+    }
+  }
+}

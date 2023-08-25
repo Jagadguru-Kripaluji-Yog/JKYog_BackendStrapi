@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 2000,
+      "minLength": 10
+    },
+    "videoUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "videos"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "videos"
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "duration": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "videos"
+    }
+  }
+}

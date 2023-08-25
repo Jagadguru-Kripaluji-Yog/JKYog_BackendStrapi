@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "courses"
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "count": {
+      "type": "biginteger"
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video.video",
+      "mappedBy": "courses"
+    },
+    "audios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::audio.audio",
+      "mappedBy": "courses"
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "courses"
+    }
+  }
+}
