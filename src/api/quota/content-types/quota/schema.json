@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotas",
+  "info": {
+    "singularName": "quota",
+    "pluralName": "quotas",
+    "displayName": "Quote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000,
+      "minLength": 1
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "data": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

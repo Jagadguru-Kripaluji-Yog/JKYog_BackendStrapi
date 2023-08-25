@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audios",
+  "info": {
+    "singularName": "audio",
+    "pluralName": "audios",
+    "displayName": "Audio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 2000,
+      "minLength": 10,
+      "required": true
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "audio"
+    },
+    "duration": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "audioUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "audios"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "audios"
+    }
+  }
+}

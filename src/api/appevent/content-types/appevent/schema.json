@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appevents",
+  "info": {
+    "singularName": "appevent",
+    "pluralName": "appevents",
+    "displayName": "AppEvent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true,
+      "maxLength": 2000,
+      "minLength": 1
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "websiteUrl": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    }
+  }
+}
