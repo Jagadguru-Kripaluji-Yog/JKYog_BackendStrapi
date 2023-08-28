@@ -33,7 +33,7 @@
       "type": "boolean",
       "required": true
     },
-    "topic": {
+    "apptopic": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
@@ -59,13 +59,13 @@
       "required": true,
       "minLength": 1
     },
-    "collections": {
+    "appcollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
       "inversedBy": "appaudios"
     },
-    "courses": {
+    "appcourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",

@@ -43,7 +43,7 @@
       "default": false,
       "required": true
     },
-    "topic": {
+    "apptopic": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",

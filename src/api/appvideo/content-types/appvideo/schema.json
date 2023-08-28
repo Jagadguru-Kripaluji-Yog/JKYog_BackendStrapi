@@ -29,13 +29,13 @@
       "required": true,
       "minLength": 1
     },
-    "collections": {
+    "appcollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
       "inversedBy": "appvideos"
     },
-    "courses": {
+    "appcourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",

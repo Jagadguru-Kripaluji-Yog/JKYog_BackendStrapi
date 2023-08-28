@@ -24,37 +24,37 @@
       "minLength": 1,
       "default": "0"
     },
-    "books": {
+    "appbooks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appbook.appbook",
       "mappedBy": "apptopic"
     },
-    "audio": {
+    "appaudio": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appaudio.appaudio",
       "mappedBy": "apptopic"
     },
-    "collections": {
+    "appcollections": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appcollection.appcollection",
       "mappedBy": "apptopic"
     },
-    "courses": {
+    "appcourses": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appcourse.appcourse",
       "mappedBy": "apptopic"
     },
-    "videos": {
+    "appvideos": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appvideo.appvideo",
       "mappedBy": "apptopic"
     },
-    "articles": {
+    "apparticles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::apparticle.apparticle",
