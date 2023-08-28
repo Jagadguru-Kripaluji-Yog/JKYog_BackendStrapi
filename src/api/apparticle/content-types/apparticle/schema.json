@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apparticles",
+  "info": {
+    "singularName": "apparticle",
+    "pluralName": "apparticles",
+    "displayName": "AppArticle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appcollection.appcollection",
+      "inversedBy": "apparticles"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appcourse.appcourse",
+      "inversedBy": "apparticles"
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::apptopic.apptopic",
+      "inversedBy": "apparticles"
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "header": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "readingTimes": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "imagePath": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "required": true,
+      "default": "en",
+      "minLength": 1,
+      "maxLength": 256
+    }
+  }
+}

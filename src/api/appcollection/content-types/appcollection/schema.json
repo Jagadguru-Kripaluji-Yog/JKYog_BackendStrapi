@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appcollections",
+  "info": {
+    "singularName": "appcollection",
+    "pluralName": "appcollections",
+    "displayName": "AppCollection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::apptopic.apptopic",
+      "inversedBy": "appcollections"
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "maxLength": 2000,
+      "minLength": 1
+    },
+    "count": {
+      "type": "biginteger",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appvideo.appvideo",
+      "mappedBy": "appcollections"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::apparticle.apparticle",
+      "mappedBy": "appcollections"
+    },
+    "audios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appaudio.appaudio",
+      "mappedBy": "appcollections"
+    },
+    "language": {
+      "type": "string",
+      "required": true,
+      "default": "en",
+      "minLength": 1,
+      "maxLength": 256
+    }
+  }
+}

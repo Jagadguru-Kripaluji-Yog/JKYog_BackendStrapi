@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apptopics",
+  "info": {
+    "singularName": "apptopic",
+    "pluralName": "apptopics",
+    "displayName": "AppTopic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "imagePath": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "default": "0"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appbook.appbook",
+      "mappedBy": "apptopic"
+    },
+    "audio": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appaudio.appaudio",
+      "mappedBy": "apptopic"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appcollection.appcollection",
+      "mappedBy": "apptopic"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appcourse.appcourse",
+      "mappedBy": "apptopic"
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appvideo.appvideo",
+      "mappedBy": "apptopic"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::apparticle.apparticle",
+      "mappedBy": "apptopic"
+    },
+    "language": {
+      "type": "string",
+      "required": true,
+      "default": "en",
+      "minLength": 1,
+      "maxLength": 256
+    }
+  }
+}

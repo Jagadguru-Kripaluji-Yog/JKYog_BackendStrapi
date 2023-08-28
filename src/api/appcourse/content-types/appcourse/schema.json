@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appcourses",
+  "info": {
+    "singularName": "appcourse",
+    "pluralName": "appcourses",
+    "displayName": "AppCourse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "private": {
+      "type": "boolean",
+      "required": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::apptopic.apptopic",
+      "inversedBy": "appcourses"
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "count": {
+      "type": "biginteger"
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appvideo.appvideo",
+      "mappedBy": "appcourses"
+    },
+    "audios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appaudio.appaudio",
+      "mappedBy": "appcourses"
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::apparticle.apparticle",
+      "mappedBy": "appcourses"
+    },
+    "language": {
+      "type": "string",
+      "required": true,
+      "default": "en",
+      "minLength": 1,
+      "maxLength": 256
+    }
+  }
+}

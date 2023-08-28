@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "appevents",
+  "collectionName": "appquotas",
   "info": {
-    "singularName": "appevent",
-    "pluralName": "appevents",
-    "displayName": "AppEvent",
+    "singularName": "appquota",
+    "pluralName": "appquotas",
+    "displayName": "AppQuote",
     "description": ""
   },
   "options": {
@@ -13,26 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true,
-      "minLength": 1,
-      "maxLength": 256
-    },
-    "subtitle": {
       "type": "text",
       "required": true,
-      "maxLength": 2000,
+      "maxLength": 1000,
       "minLength": 1
     },
-    "imageUrl": {
+    "author": {
       "type": "string",
       "required": true,
+      "maxLength": 256,
       "minLength": 1
     },
-    "websiteUrl": {
-      "type": "string",
-      "required": true,
-      "minLength": 1
+    "data": {
+      "type": "datetime",
+      "required": true
     },
     "language": {
       "type": "string",
