@@ -50,9 +50,12 @@
       "inversedBy": "appbooks"
     },
     "description": {
-      "type": "richtext",
-      "required": true,
-      "minLength": 1
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "language": {
       "type": "string",

@@ -29,10 +29,12 @@
       "inversedBy": "appcourses"
     },
     "content": {
-      "type": "text",
-      "required": true,
-      "minLength": 1,
-      "maxLength": 2000
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "count": {
       "type": "biginteger"
