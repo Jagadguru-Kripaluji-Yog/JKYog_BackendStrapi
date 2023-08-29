@@ -19,7 +19,7 @@
       "minLength": 1
     },
     "description": {
-      "type": "text",
+      "type": "richtext",
       "maxLength": 2000,
       "minLength": 10,
       "required": true
