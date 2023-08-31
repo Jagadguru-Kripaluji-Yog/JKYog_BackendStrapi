@@ -38,6 +38,12 @@
       },
       "customField": "plugin::ckeditor.CKEditor"
     },
+    "ImageURL": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
     "ItemCount": {
       "type": "biginteger",
       "required": true
