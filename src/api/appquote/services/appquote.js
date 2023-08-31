@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * appquota service
+ * appquote service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::appquota.appquota');
+module.exports = createCoreService('api::appquote.appquote');

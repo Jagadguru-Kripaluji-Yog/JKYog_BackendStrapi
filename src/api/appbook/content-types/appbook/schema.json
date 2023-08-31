@@ -4,65 +4,68 @@
   "info": {
     "singularName": "appbook",
     "pluralName": "appbooks",
-    "displayName": "AppBook",
-    "description": ""
+    "displayName": "App Book",
+    "description": "This collection represents books within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "BookTitle": {
       "type": "string",
       "required": true,
       "maxLength": 256,
       "minLength": 1
     },
-    "private": {
+    "IsPrivate": {
       "type": "boolean",
-      "required": true
-    },
-    "imageUrl": {
-      "type": "string",
       "required": true,
-      "minLength": 1
+      "default": false
     },
-    "websiteUrl": {
-      "type": "string",
-      "required": true,
-      "minLength": 1
-    },
-    "color": {
+    "ImageURL": {
       "type": "string",
       "required": true,
       "minLength": 1,
-      "unique": false
+      "pattern": "https?://.+"
     },
-    "popular": {
+    "WebsiteURL": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
+    "Color": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "default": 1
+    },
+    "IsPopular": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
-    "apptopic": {
+    "LinkedTopics": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
       "inversedBy": "appbooks"
     },
-    "description": {
+    "BookDescription": {
       "type": "customField",
+      "required": true,
       "options": {
         "output": "HTML",
         "preset": "rich"
       },
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }

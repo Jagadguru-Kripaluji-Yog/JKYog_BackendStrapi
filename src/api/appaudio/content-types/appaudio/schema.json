@@ -4,81 +4,80 @@
   "info": {
     "singularName": "appaudio",
     "pluralName": "appaudios",
-    "displayName": "AppAudio",
-    "description": ""
+    "displayName": "App Audio",
+    "description": "This collection represents audio files within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "AudioTitle": {
       "type": "string",
       "required": true,
       "maxLength": 256,
       "minLength": 1
     },
-    "description": {
+    "AudioDescription": {
       "type": "customField",
+      "required": true,
       "options": {
         "output": "HTML",
         "preset": "rich"
       },
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "imageUrl": {
+    "ImageURL": {
       "type": "string",
       "required": true,
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "https?://.+"
     },
-    "private": {
+    "IsPrivate": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
-    "apptopic": {
+    "LinkedTopics": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
-      "inversedBy": "appaudio"
+      "inversedBy": "appaudios"
     },
-    "duration": {
+    "Duration": {
       "type": "string",
+      "required": true,
+      "pattern": "^\\d+:[0-5]?\\d$",
+      "default": "1:00"
+    },
+    "AudioURL": {
+      "type": "string",
+      "required": true,
       "minLength": 1,
-      "required": true
+      "pattern": "https?://.+"
     },
-    "audioUrl": {
-      "type": "string",
-      "required": true,
-      "minLength": 1
-    },
-    "popular": {
+    "IsPopular": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
-    "color": {
+    "Color": {
       "type": "string",
       "required": true,
-      "minLength": 1
+      "minLength": 1,
+      "default": 0
     },
-    "appcollections": {
+    "LinkedCollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
       "inversedBy": "appaudios"
     },
-    "appcourses": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::appcourse.appcourse",
-      "inversedBy": "appaudios"
-    },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }

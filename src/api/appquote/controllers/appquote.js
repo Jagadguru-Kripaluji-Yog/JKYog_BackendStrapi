@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * appquota controller
+ * appquote controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::appquota.appquota');
+module.exports = createCoreController('api::appquote.appquote');

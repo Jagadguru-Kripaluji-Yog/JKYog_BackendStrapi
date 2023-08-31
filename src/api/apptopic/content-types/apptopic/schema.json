@@ -30,7 +30,7 @@
       "target": "api::appbook.appbook",
       "mappedBy": "apptopic"
     },
-    "appaudio": {
+    "appaudios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appaudio.appaudio",
