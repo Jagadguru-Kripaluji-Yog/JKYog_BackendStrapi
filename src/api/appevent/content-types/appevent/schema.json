@@ -16,13 +16,22 @@
       "type": "string",
       "required": true,
       "minLength": 1,
-      "maxLength": 256
+      "maxLength": 100
     },
     "EventSubtitle": {
       "type": "text",
       "required": true,
-      "maxLength": 2000,
+      "maxLength": 100,
       "minLength": 1
+    },
+    "EventDescription": {
+      "type": "customField",
+      "required": true,
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "ImageURL": {
       "type": "string",

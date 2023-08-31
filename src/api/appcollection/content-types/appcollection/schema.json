@@ -30,10 +30,13 @@
       "inversedBy": "LinkedCollections"
     },
     "CollectionContent": {
-      "type": "text",
+      "type": "customField",
       "required": true,
-      "maxLength": 2000,
-      "minLength": 1
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "ItemCount": {
       "type": "biginteger",
