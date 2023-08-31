@@ -4,7 +4,7 @@
   "info": {
     "singularName": "apparticle",
     "pluralName": "apparticles",
-    "displayName": "App Article",
+    "displayName": "App Articles",
     "description": "This collection represents articles within the app."
   },
   "options": {
@@ -22,13 +22,19 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
-      "inversedBy": "apparticles"
+      "inversedBy": "LinkedArticles"
     },
     "LinkedTopics": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
-      "inversedBy": "apparticles"
+      "inversedBy": "LinkedArticles"
+    },
+    "LinkedCourses": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appcourse.appcourse",
+      "inversedBy": "LinkedArticles"
     },
     "IsPrivate": {
       "type": "boolean",

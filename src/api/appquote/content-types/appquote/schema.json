@@ -4,7 +4,7 @@
   "info": {
     "singularName": "appquote",
     "pluralName": "appquotes",
-    "displayName": "App Quote",
+    "displayName": "App Quotes",
     "description": "This collection represents quotes within the app."
   },
   "options": {

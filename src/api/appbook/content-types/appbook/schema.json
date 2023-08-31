@@ -4,7 +4,7 @@
   "info": {
     "singularName": "appbook",
     "pluralName": "appbooks",
-    "displayName": "App Book",
+    "displayName": "App Books",
     "description": "This collection represents books within the app."
   },
   "options": {
@@ -50,7 +50,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
-      "inversedBy": "appbooks"
+      "inversedBy": "LinkedBooks"
     },
     "BookDescription": {
       "type": "customField",

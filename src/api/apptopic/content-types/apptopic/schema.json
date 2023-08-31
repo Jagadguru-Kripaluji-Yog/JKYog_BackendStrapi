@@ -4,68 +4,67 @@
   "info": {
     "singularName": "apptopic",
     "pluralName": "apptopics",
-    "displayName": "AppTopic",
-    "description": ""
+    "displayName": "App Topics",
+    "description": "This collection represents topics within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "TopicTitle": {
       "type": "string",
       "required": true,
       "minLength": 1,
       "maxLength": 256
     },
-    "imagePath": {
+    "ImagePath": {
       "type": "string",
       "required": true,
       "minLength": 1,
-      "default": "0"
+      "pattern": "https?://.+"
     },
-    "appbooks": {
+    "LinkedBooks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appbook.appbook",
-      "mappedBy": "apptopic"
+      "mappedBy": "LinkedTopics"
     },
-    "appaudios": {
+    "LinkedAudios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appaudio.appaudio",
-      "mappedBy": "apptopic"
+      "mappedBy": "LinkedTopics"
     },
-    "appcollections": {
+    "LinkedCollections": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appcollection.appcollection",
-      "mappedBy": "apptopic"
+      "mappedBy": "LinkedTopics"
     },
-    "appcourses": {
+    "LinkedCourses": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appcourse.appcourse",
-      "mappedBy": "apptopic"
+      "mappedBy": "LinkedTopics"
     },
-    "appvideos": {
+    "LinkedVideos": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appvideo.appvideo",
-      "mappedBy": "apptopic"
+      "mappedBy": "LinkedTopics"
     },
-    "apparticles": {
+    "LinkedArticles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::apparticle.apparticle",
-      "mappedBy": "apptopic"
+      "mappedBy": "LinkedTopics"
     },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }

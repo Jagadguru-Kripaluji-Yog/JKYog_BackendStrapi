@@ -4,7 +4,7 @@
   "info": {
     "singularName": "appaudio",
     "pluralName": "appaudios",
-    "displayName": "App Audio",
+    "displayName": "App Audios",
     "description": "This collection represents audio files within the app."
   },
   "options": {
@@ -42,7 +42,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
-      "inversedBy": "appaudios"
+      "inversedBy": "LinkedAudios"
     },
     "Duration": {
       "type": "string",
@@ -71,7 +71,13 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
-      "inversedBy": "appaudios"
+      "inversedBy": "LinkedAudios"
+    },
+    "LinkedCourses": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appcourse.appcourse",
+      "inversedBy": "LinkedAudios"
     },
     "Language": {
       "type": "enumeration",

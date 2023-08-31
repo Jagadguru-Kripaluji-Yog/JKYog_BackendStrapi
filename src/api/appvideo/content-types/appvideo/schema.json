@@ -4,76 +4,80 @@
   "info": {
     "singularName": "appvideo",
     "pluralName": "appvideos",
-    "displayName": "AppVideo",
-    "description": ""
+    "displayName": "App Videos",
+    "description": "This collection represents videos within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "VideoTitle": {
       "type": "string",
       "required": true,
       "maxLength": 256,
       "minLength": 1
     },
-    "description": {
+    "VideoDescription": {
       "type": "customField",
+      "required": true,
       "options": {
         "output": "HTML",
         "preset": "rich"
-        },
-       "customField": "plugin::ckeditor.CKEditor"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
-    "videoUrl": {
+    "VideoURL": {
       "type": "string",
       "required": true,
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "https?://.+"
     },
-    "appcollections": {
+    "LinkedCollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
-      "inversedBy": "appvideos"
+      "inversedBy": "LinkedVideos"
     },
-    "appcourses": {
+    "LinkedCourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",
-      "inversedBy": "appvideos"
+      "inversedBy": "LinkedVideos"
     },
-    "imageUrl": {
+    "ImageURL": {
       "type": "string",
       "required": true,
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "https?://.+"
     },
-    "private": {
+    "IsPrivate": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
-    "popular": {
+    "IsPopular": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
-    "duration": {
+    "Duration": {
       "type": "string",
       "required": true,
-      "minLength": 1
+      "pattern": "^\\d+:[0-5]?\\d$",
+      "default": "10:00"
     },
-    "topic": {
+    "LinkedTopics": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
-      "inversedBy": "appvideos"
+      "inversedBy": "LinkedVideos"
     },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }
