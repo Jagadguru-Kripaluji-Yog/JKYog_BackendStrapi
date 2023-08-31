@@ -1,41 +1,41 @@
 {
   "kind": "collectionType",
-  "collectionName": "appquotas",
+  "collectionName": "appquotes",
   "info": {
-    "singularName": "appquota",
-    "pluralName": "appquotas",
-    "displayName": "AppQuote",
-    "description": ""
+    "singularName": "appquote",
+    "pluralName": "appquotes",
+    "displayName": "App Quotes",
+    "description": "This collection represents quotes within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-    "type": "customField",
+    "QuoteText": {
+      "type": "customField",
+      "required": true,
       "options": {
         "output": "HTML",
         "preset": "rich"
-        },
+      },
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "author": {
+    "Author": {
       "type": "string",
       "required": true,
       "maxLength": 256,
       "minLength": 1
     },
-    "data": {
+    "Date": {
       "type": "datetime",
       "required": true
     },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }
