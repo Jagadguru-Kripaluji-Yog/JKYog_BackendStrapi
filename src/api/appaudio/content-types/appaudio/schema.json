@@ -19,10 +19,12 @@
       "minLength": 1
     },
     "description": {
-      "type": "text",
-      "maxLength": 2000,
-      "minLength": 10,
-      "required": true
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "imageUrl": {
       "type": "string",
@@ -33,7 +35,7 @@
       "type": "boolean",
       "required": true
     },
-    "topic": {
+    "apptopic": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
@@ -59,13 +61,13 @@
       "required": true,
       "minLength": 1
     },
-    "collections": {
+    "appcollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
       "inversedBy": "appaudios"
     },
-    "courses": {
+    "appcourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",

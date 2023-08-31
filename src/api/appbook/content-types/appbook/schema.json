@@ -43,16 +43,19 @@
       "default": false,
       "required": true
     },
-    "topic": {
+    "apptopic": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
       "inversedBy": "appbooks"
     },
     "description": {
-      "type": "richtext",
-      "required": true,
-      "minLength": 1
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "language": {
       "type": "string",

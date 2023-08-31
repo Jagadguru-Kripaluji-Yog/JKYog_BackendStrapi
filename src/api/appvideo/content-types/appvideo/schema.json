@@ -19,23 +19,25 @@
       "minLength": 1
     },
     "description": {
-      "type": "text",
-      "required": true,
-      "maxLength": 2000,
-      "minLength": 10
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+        },
+       "customField": "plugin::ckeditor.CKEditor"
     },
     "videoUrl": {
       "type": "string",
       "required": true,
       "minLength": 1
     },
-    "collections": {
+    "appcollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
       "inversedBy": "appvideos"
     },
-    "courses": {
+    "appcourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",

@@ -18,19 +18,19 @@
       "maxLength": 256,
       "minLength": 1
     },
-    "collections": {
+    "appcollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
       "inversedBy": "apparticles"
     },
-    "courses": {
+    "appcourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",
       "inversedBy": "apparticles"
     },
-    "topic": {
+    "apptopic": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
@@ -56,9 +56,12 @@
       "minLength": 1
     },
     "content": {
-      "type": "richtext",
-      "required": true,
-      "minLength": 1
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "language": {
       "type": "string",
