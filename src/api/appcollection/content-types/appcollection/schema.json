@@ -44,10 +44,6 @@
       "minLength": 1,
       "pattern": "https?://.+"
     },
-    "ItemCount": {
-      "type": "biginteger",
-      "required": true
-    },
     "Color": {
       "type": "string",
       "required": true,
