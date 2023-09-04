@@ -40,7 +40,8 @@
     },
     "LinkedTopics": {
       "type": "relation",
-      "relation": "manyToOne",
+      "required": true,
+      "relation": "oneToMany",
       "target": "api::apptopic.apptopic",
       "inversedBy": "LinkedAudios"
     },
