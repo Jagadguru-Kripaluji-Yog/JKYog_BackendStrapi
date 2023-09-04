@@ -25,8 +25,7 @@
     },
     "LinkedTopics": {
       "type": "relation",
-      "required": true,
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::apptopic.apptopic",
       "inversedBy": "LinkedCourses"
     },

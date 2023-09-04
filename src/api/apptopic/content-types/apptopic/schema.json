@@ -26,37 +26,37 @@
     },
     "LinkedBooks": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::appbook.appbook",
       "mappedBy": "LinkedTopics"
     },
     "LinkedAudios": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::appaudio.appaudio",
       "mappedBy": "LinkedTopics"
     },
     "LinkedCollections": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::appcollection.appcollection",
       "mappedBy": "LinkedTopics"
     },
     "LinkedCourses": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::appcourse.appcourse",
       "mappedBy": "LinkedTopics"
     },
     "LinkedVideos": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::appvideo.appvideo",
       "mappedBy": "LinkedTopics"
     },
     "LinkedArticles": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::apparticle.apparticle",
       "mappedBy": "LinkedTopics"
     },
