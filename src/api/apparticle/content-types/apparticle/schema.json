@@ -26,7 +26,8 @@
     },
     "LinkedTopics": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
+      "required": "true",
       "target": "api::apptopic.apptopic",
       "inversedBy": "LinkedArticles"
     },

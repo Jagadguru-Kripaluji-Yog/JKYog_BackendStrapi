@@ -48,7 +48,8 @@
     },
     "LinkedTopics": {
       "type": "relation",
-      "relation": "manyToOne",
+      "required": true,
+      "relation": "manyToMany",
       "target": "api::apptopic.apptopic",
       "inversedBy": "LinkedBooks"
     },
