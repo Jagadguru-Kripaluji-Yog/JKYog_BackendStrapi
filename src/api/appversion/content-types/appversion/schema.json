@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appversions",
+  "info": {
+    "singularName": "appversion",
+    "pluralName": "appversions",
+    "displayName": "App Version",
+    "description": "This model represents info about what version of app is actual now."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "softUpdate": {
+      "type": "string",
+      "required": true,
+      "maxLength": 12,
+      "minLength": 1
+    },
+    "hardUpdate": {
+      "type": "string",
+      "required": true,
+      "maxLength": 12,
+      "minLength": 1
+    }
+  }
+}

@@ -70,7 +70,7 @@
     "LinkedTopics": {
       "type": "relation",
       "required": true,
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::apptopic.apptopic",
       "inversedBy": "LinkedVideos"
     },
