@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "softUpdate": {
+    "SoftUpdate": {
       "type": "string",
       "required": true,
       "maxLength": 12,
       "minLength": 1
     },
-    "hardUpdate": {
+    "HardUpdate": {
       "type": "string",
       "required": true,
       "maxLength": 12,
