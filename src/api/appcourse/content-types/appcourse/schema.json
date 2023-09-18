@@ -4,80 +4,87 @@
   "info": {
     "singularName": "appcourse",
     "pluralName": "appcourses",
-    "displayName": "AppCourse",
-    "description": ""
+    "displayName": "App Courses",
+    "description": "This collection represents courses within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "CourseTitle": {
       "type": "string",
       "required": true,
       "maxLength": 256,
       "minLength": 1
     },
-    "private": {
+    "IsPrivate": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
-    "apptopic": {
+    "LinkedTopics": {
       "type": "relation",
-      "relation": "manyToOne",
+      "required": true,
+      "relation": "manyToMany",
       "target": "api::apptopic.apptopic",
-      "inversedBy": "appcourses"
+      "inversedBy": "LinkedCourses"
     },
-    "content": {
+    "CourseContent": {
       "type": "customField",
+      "required": true,
       "options": {
         "output": "HTML",
         "preset": "rich"
       },
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "count": {
-      "type": "biginteger"
-    },
-    "color": {
+    "Color": {
       "type": "string",
       "required": true,
-      "minLength": 1
+      "minLength": 1,
+      "default": 1
     },
-    "popular": {
+    "IsPopular": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
-    "appvideos": {
+    "LinkedVideos": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appvideo.appvideo",
-      "mappedBy": "appcourses"
+      "mappedBy": "LinkedCourses"
     },
-    "appaudios": {
+    "LinkedAudios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appaudio.appaudio",
-      "mappedBy": "appcourses"
+      "mappedBy": "LinkedCourses"
     },
-    "url": {
+    "CourseURL": {
       "type": "string",
+      "required": true,
       "minLength": 1,
-      "required": true
+      "pattern": "https?://.+"
     },
-    "apparticles": {
+    "ImageURL": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
+    "LinkedArticles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::apparticle.apparticle",
-      "mappedBy": "appcourses"
+      "mappedBy": "LinkedCourses"
     },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }

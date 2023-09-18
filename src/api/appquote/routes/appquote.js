@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * appquota router
+ * appquote router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::appquota.appquota');
+module.exports = createCoreRouter('api::appquote.appquote');

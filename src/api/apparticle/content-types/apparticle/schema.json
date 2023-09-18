@@ -4,71 +4,70 @@
   "info": {
     "singularName": "apparticle",
     "pluralName": "apparticles",
-    "displayName": "AppArticle",
-    "description": ""
+    "displayName": "App Articles",
+    "description": "This collection represents articles within the app."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "ArticleTitle": {
       "type": "string",
       "required": true,
       "maxLength": 256,
       "minLength": 1
     },
-    "appcollections": {
+    "LinkedCollections": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcollection.appcollection",
-      "inversedBy": "apparticles"
+      "inversedBy": "LinkedArticles"
     },
-    "appcourses": {
+    "LinkedTopics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "required": "true",
+      "target": "api::apptopic.apptopic",
+      "inversedBy": "LinkedArticles"
+    },
+    "LinkedCourses": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::appcourse.appcourse",
-      "inversedBy": "apparticles"
+      "inversedBy": "LinkedArticles"
     },
-    "apptopic": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::apptopic.apptopic",
-      "inversedBy": "apparticles"
-    },
-    "private": {
+    "IsPrivate": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
-    "header": {
+    "ReadingTime": {
+      "type": "integer",
+      "required": true,
+      "default": 2,
+      "min": 1
+    },
+    "ImageURL": {
       "type": "string",
+      "required": true,
       "minLength": 1,
-      "required": true
+      "pattern": "https?://.+"
     },
-    "readingTimes": {
-      "type": "string",
-      "required": true,
-      "minLength": 1
-    },
-    "imagePath": {
-      "type": "string",
-      "required": true,
-      "minLength": 1
-    },
-    "content": {
+    "Content": {
       "type": "customField",
+      "required": true,
       "options": {
         "output": "HTML",
         "preset": "rich"
       },
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "language": {
-      "type": "string",
+    "Language": {
+      "type": "enumeration",
       "required": true,
       "default": "en",
-      "minLength": 1,
-      "maxLength": 256
+      "enum": ["en", "hi"]
     }
   }
 }
