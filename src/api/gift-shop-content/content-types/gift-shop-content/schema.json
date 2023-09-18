@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_shop_contents",
+  "info": {
+    "singularName": "gift-shop-content",
+    "pluralName": "gift-shop-contents",
+    "displayName": "GiftShop Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
