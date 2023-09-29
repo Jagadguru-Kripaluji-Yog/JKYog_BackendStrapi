@@ -33,6 +33,13 @@
       },
       "customField": "plugin::ckeditor.CKEditor"
     },
+    "StartTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "EndTime": {
+      "type": "datetime"
+    },
     "ImageURL": {
       "type": "string",
       "required": true,
@@ -50,6 +57,12 @@
       "required": true,
       "default": "en",
       "enum": ["en", "hi"]
+    },
+    "EventLocation": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Online",
+      "enum": ["Online", "Offline", "Both"]
     }
   }
 }

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appannouncements",
+  "info": {
+    "singularName": "appannouncement",
+    "pluralName": "appannouncements",
+    "displayName": "App Announcement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LinkedVideos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appvideo.appvideo",
+      "mappedBy": "LinkedCollections"
+    },
+    "LinkedArticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::apparticle.apparticle",
+      "mappedBy": "LinkedCollections"
+    },
+    "LinkedAudios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appaudio.appaudio",
+      "mappedBy": "LinkedCollections"
+    },
+    "LinkedQuotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appquote.appquote",
+      "mappedBy": "LinkedCollections"
+    },
+    "LinkedAppEvents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appevent.appevent",
+      "mappedBy": "LinkedCollections"
+    },
+    "LinkedAppBooks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appbook.appbook",
+      "mappedBy": "LinkedCollections"
+    },
+    "Language": {
+      "type": "enumeration",
+      "required": true,
+      "default": "en",
+      "enum": ["en", "hi"]
+    }
+  }
+}
