@@ -58,6 +58,12 @@
       "default": "en",
       "enum": ["en", "hi"]
     },
+    "LinkedAppannouncements": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appannouncement.appannouncement",
+      "inversedBy": "LinkedAppEvents"
+    },
     "EventLocation": {
       "type": "enumeration",
       "required": true,

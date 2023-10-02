@@ -31,6 +31,12 @@
       "type": "datetime",
       "required": true
     },
+    "LinkedAppannouncements": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appannouncement.appannouncement",
+      "inversedBy": "LinkedQuotes"
+    },
     "Language": {
       "type": "enumeration",
       "required": true,

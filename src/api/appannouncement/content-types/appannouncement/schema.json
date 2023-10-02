@@ -15,37 +15,37 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appvideo.appvideo",
-      "mappedBy": "LinkedCollections"
+      "mappedBy": "LinkedAppannouncements"
     },
     "LinkedArticles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::apparticle.apparticle",
-      "mappedBy": "LinkedCollections"
+      "mappedBy": "LinkedAppannouncements"
     },
     "LinkedAudios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appaudio.appaudio",
-      "mappedBy": "LinkedCollections"
+      "mappedBy": "LinkedAppannouncements"
     },
     "LinkedQuotes": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appquote.appquote",
-      "mappedBy": "LinkedCollections"
+      "mappedBy": "LinkedAppannouncements"
     },
     "LinkedAppEvents": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appevent.appevent",
-      "mappedBy": "LinkedCollections"
+      "mappedBy": "LinkedAppannouncements"
     },
     "LinkedAppBooks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appbook.appbook",
-      "mappedBy": "LinkedCollections"
+      "mappedBy": "LinkedAppannouncements"
     },
     "Language": {
       "type": "enumeration",
