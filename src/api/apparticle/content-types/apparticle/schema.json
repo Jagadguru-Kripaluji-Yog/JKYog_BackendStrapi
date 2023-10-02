@@ -37,6 +37,12 @@
       "target": "api::appcourse.appcourse",
       "inversedBy": "LinkedArticles"
     },
+    "LinkedAppannouncements": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appannouncement.appannouncement",
+      "inversedBy": "LinkedArticles"
+    },
     "IsPrivate": {
       "type": "boolean",
       "required": true,

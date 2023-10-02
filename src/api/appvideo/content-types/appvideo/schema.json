@@ -74,6 +74,12 @@
       "target": "api::apptopic.apptopic",
       "inversedBy": "LinkedVideos"
     },
+    "LinkedAppannouncements": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appannouncement.appannouncement",
+      "inversedBy": "LinkedVideos"
+    },
     "Language": {
       "type": "enumeration",
       "required": true,

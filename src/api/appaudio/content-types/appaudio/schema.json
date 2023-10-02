@@ -80,6 +80,12 @@
       "target": "api::appcourse.appcourse",
       "inversedBy": "LinkedAudios"
     },
+    "LinkedAppannouncements": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appannouncement.appannouncement",
+      "inversedBy": "LinkedAudios"
+    },
     "Language": {
       "type": "enumeration",
       "required": true,
