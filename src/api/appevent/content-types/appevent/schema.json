@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Timezone": {
-      "type": "customField",
-      "required": true,
-      "customField": "plugin::timezone-select.timezone"
-    },
     "EventTitle": {
       "type": "string",
       "required": true,
