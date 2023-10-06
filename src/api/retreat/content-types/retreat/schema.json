@@ -1,0 +1,198 @@
+{
+  "kind": "collectionType",
+  "collectionName": "retreats",
+  "info": {
+    "singularName": "retreat",
+    "pluralName": "retreats",
+    "displayName": "Retreat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "title": {
+      "type": "string"
+    },
+    "banner_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading1": {
+      "type": "string"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "register_link_name": {
+      "type": "string"
+    },
+    "register_url": {
+      "type": "string"
+    },
+    "video_title1": {
+      "type": "string"
+    },
+    "retreat_video_url1": {
+      "type": "string"
+    },
+    "retreat_benefits_bg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "faq_heading1": {
+      "type": "string"
+    },
+    "faq_heading2": {
+      "type": "string"
+    },
+    "separator_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "question1": {
+      "type": "string"
+    },
+    "video_title2": {
+      "type": "string"
+    },
+    "retreat_video_url2": {
+      "type": "string"
+    },
+    "video_title3": {
+      "type": "string"
+    },
+    "retreat_video_url3": {
+      "type": "string"
+    },
+    "answer1": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "question2": {
+      "type": "string"
+    },
+    "answer2": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "question3": {
+      "type": "string"
+    },
+    "question4": {
+      "type": "string"
+    },
+    "question5": {
+      "type": "string"
+    },
+    "question6": {
+      "type": "string"
+    },
+    "question7": {
+      "type": "string"
+    },
+    "question8": {
+      "type": "string"
+    },
+    "question9": {
+      "type": "string"
+    },
+    "answer3": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "answer4": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "answer5": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "answer6": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "answer7": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "answer8": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "answer9": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}
