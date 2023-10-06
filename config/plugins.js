@@ -1,5 +1,31 @@
 module.exports = ({ env }) => ({
   // ...
+ "rest-cache": {
+    config: {
+        provider: {
+         name: "memory",
+            options: {
+              max: 32767,
+              maxAge: 3600,
+            },
+          },
+          strategy: {
+            contentTypes: [
+              "api::appversion.appversion",
+              "api::apptopic.apptopic",
+              "api::appquote.appquote",
+              "api::appevent.appevent",
+              "api::appcourse.appcourse",
+              "api::appcollection.appcollection",
+              "api::appannouncement.appannouncement",
+              "api::appvideo.appvideo",
+              "api::apparticle.apparticle",
+              "api::appaudio.appaudio",
+              "api::appbook.appbook",
+            ],
+          },
+        },
+      },
   upload: {
     config: {
       provider: "aws-s3",
