@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_shop_sideimages",
+  "info": {
+    "singularName": "gift-shop-sideimage",
+    "pluralName": "gift-shop-sideimages",
+    "displayName": "GiftShop Sideimage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "side_images_url": {
+      "type": "string"
+    },
+    "side_images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

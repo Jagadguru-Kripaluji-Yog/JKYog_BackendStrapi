@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_shop_items",
+  "info": {
+    "singularName": "gift-shop-item",
+    "pluralName": "gift-shop-items",
+    "displayName": "GiftShop Item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
