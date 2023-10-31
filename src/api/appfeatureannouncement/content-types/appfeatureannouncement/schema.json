@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appfeatureannouncements",
+  "info": {
+    "singularName": "appfeatureannouncement",
+    "pluralName": "appfeatureannouncements",
+    "displayName": "App FeatureAnnouncement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+      "Title": {
+        "type": "string",
+        "required": true,
+        "maxLength": 256,
+        "minLength": 1
+      },
+      "Subtitle": {
+        "type": "customField",
+        "required": true,
+        "options": {
+          "output": "HTML",
+          "preset": "rich"
+        },
+        "customField": "plugin::ckeditor.CKEditor"
+      },
+      "ImageURL": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "https?://.+"
+      },
+      "VideoURL": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "https?://.+"
+      },
+      "ScreenNumber": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "https?://.+"
+      }
+  }
+}
