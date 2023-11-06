@@ -41,7 +41,7 @@
          "default": "Fifth",
          "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"]
        },
-      "MeditaionSection": {
+      "MeditationSection": {
          "type": "enumeration",
          "required": true,
          "default": "Sixth",
