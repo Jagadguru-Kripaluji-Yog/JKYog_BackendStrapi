@@ -4,7 +4,7 @@
   "info": {
     "singularName": "appfeatureannouncement",
     "pluralName": "appfeatureannouncements",
-    "displayName": "App FeatureAnnouncement"
+    "displayName": "App Feature Announcement"
   },
   "options": {
     "draftAndPublish": true

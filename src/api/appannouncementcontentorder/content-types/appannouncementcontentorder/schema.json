@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appannouncementcontentorders",
+  "info": {
+    "singularName": "appannouncementcontentorder",
+    "pluralName": "appannouncementcontentorders",
+    "displayName": "App Announcement Content Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+      "QuoteSection": {
+         "type": "enumeration",
+         "required": true,
+         "default": "First",
+         "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+       },
+      "VideosSection": {
+         "type": "enumeration",
+         "required": true,
+         "default": "Second",
+         "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+       },
+      "EventsSection": {
+         "type": "enumeration",
+         "required": true,
+         "default": "Third",
+         "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+       },
+      "ArticlesSection": {
+         "type": "enumeration",
+         "required": true,
+         "default": "Fourth",
+         "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+       },
+      "BooksSection": {
+         "type": "enumeration",
+         "required": true,
+         "default": "Fifth",
+         "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+       },
+      "AudiosSection": {
+         "type": "enumeration",
+         "required": true,
+         "default": "Sixth",
+         "enum": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"]
+       }
+  }
+}
