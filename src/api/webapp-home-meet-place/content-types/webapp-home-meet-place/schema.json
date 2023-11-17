@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webapp_home_meet_places",
+  "info": {
+    "singularName": "webapp-home-meet-place",
+    "pluralName": "webapp-home-meet-places",
+    "displayName": "Webapp Home Meet Place",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webapp_featured_events",
+  "info": {
+    "singularName": "webapp-featured-event",
+    "pluralName": "webapp-featured-events",
+    "displayName": "Webapp Featured Events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "place": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

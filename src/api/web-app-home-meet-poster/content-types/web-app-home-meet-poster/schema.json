@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_app_home_meet_posters",
+  "info": {
+    "singularName": "web-app-home-meet-poster",
+    "pluralName": "web-app-home-meet-posters",
+    "displayName": "WebApp Home Meet Poster"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "poster": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

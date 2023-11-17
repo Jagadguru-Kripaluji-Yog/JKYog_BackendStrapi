@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_app_blogs",
+  "info": {
+    "singularName": "web-app-blog",
+    "pluralName": "web-app-blogs",
+    "displayName": "WebApp Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "richtext"
+    },
+    "poster": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "tag": {
+      "type": "string"
+    }
+  }
+}

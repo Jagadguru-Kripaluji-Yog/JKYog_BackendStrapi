@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_app_upcoming_events",
+  "info": {
+    "singularName": "web-app-upcoming-event",
+    "pluralName": "web-app-upcoming-events",
+    "displayName": "WebApp Upcoming Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tags": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
