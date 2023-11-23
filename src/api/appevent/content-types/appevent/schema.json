@@ -68,7 +68,7 @@
       "type": "enumeration",
       "required": true,
       "default": "Online",
-      "enum": ["Online", "Offline", "Both"]
+      "enum": ["Online", "In-person", "Both"]
     }
   }
 }
