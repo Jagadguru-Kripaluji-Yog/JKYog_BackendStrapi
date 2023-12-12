@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applivestreams",
+  "info": {
+    "singularName": "applivestream",
+    "pluralName": "applivestreams",
+    "displayName": "App Live Stream",
+    "description": "This collection represents live videos within the app."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StreamTitle": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256,
+      "minLength": 1
+    },
+    "StreamDescription": {
+      "type": "customField",
+      "required": true,
+      "options": {
+         "output": "HTML",
+         "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+     },
+    "StreamURL": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
+    "ImageURL": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
+    "StartTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "IsPrivate": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "IsLive": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "Language": {
+      "type": "enumeration",
+      "required": true,
+      "default": "en",
+      "enum": ["en", "hi"]
+    }
+  }
+}
