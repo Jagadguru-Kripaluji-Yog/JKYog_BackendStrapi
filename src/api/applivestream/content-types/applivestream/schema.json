@@ -53,6 +53,32 @@
       "required": true,
       "default": false
     },
+    "Button_1_Title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "Button_1_Link": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
+    "Button_2_Title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "Button_2_Link": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "https?://.+"
+    },
+    "LinkedEvents": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::appevent.appevent",
+      "inversedBy": "LinkedStreams"
+    },
     "Language": {
       "type": "enumeration",
       "required": true,
