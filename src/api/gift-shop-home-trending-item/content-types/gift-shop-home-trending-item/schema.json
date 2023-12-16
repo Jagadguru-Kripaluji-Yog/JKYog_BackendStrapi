@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "gift_shop_home_trending_items",
+  "info": {
+    "singularName": "gift-shop-home-trending-item",
+    "pluralName": "gift-shop-home-trending-items",
+    "displayName": "GiftShop Home Trending Item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "string"
+    }
+  }
+}

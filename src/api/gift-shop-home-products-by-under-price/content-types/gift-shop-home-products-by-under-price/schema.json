@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "gift_shop_home_products_by_under_prices",
+  "info": {
+    "singularName": "gift-shop-home-products-by-under-price",
+    "pluralName": "gift-shop-home-products-by-under-prices",
+    "displayName": "GiftShop Home Products by Under Price"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "integer"
+    }
+  }
+}

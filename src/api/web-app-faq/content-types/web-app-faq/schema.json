@@ -4,7 +4,8 @@
   "info": {
     "singularName": "web-app-faq",
     "pluralName": "web-app-faqs",
-    "displayName": "WebApp FAQS"
+    "displayName": "GiftShop FAQS",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

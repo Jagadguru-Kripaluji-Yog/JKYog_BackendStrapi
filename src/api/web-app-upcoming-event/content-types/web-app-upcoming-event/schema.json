@@ -4,7 +4,8 @@
   "info": {
     "singularName": "web-app-upcoming-event",
     "pluralName": "web-app-upcoming-events",
-    "displayName": "WebApp Upcoming Event"
+    "displayName": "GiftShop Upcoming Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,14 +25,15 @@
       "type": "datetime"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

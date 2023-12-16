@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gift-shop-content",
     "pluralName": "gift-shop-contents",
-    "displayName": "GiftShop Content"
+    "displayName": "GiftShop Featured Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,15 @@
       "type": "string"
     },
     "content_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

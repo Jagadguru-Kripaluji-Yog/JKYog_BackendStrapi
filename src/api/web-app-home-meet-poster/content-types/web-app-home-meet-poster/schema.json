@@ -4,7 +4,8 @@
   "info": {
     "singularName": "web-app-home-meet-poster",
     "pluralName": "web-app-home-meet-posters",
-    "displayName": "WebApp Home Meet Poster"
+    "displayName": "GiftShop Home Meet Poster",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,14 +25,15 @@
       "type": "datetime"
     },
     "poster": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

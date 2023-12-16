@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gift-shop-banner",
     "pluralName": "gift-shop-banners",
-    "displayName": "GiftShop Banner"
+    "displayName": "GiftShop Main Slider",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "banner_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "banner_url": {
       "type": "string"

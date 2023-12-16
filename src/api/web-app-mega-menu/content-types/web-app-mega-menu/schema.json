@@ -4,7 +4,8 @@
   "info": {
     "singularName": "web-app-mega-menu",
     "pluralName": "web-app-mega-menus",
-    "displayName": "WebApp Mega menu"
+    "displayName": "GiftShop Mega Menu",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

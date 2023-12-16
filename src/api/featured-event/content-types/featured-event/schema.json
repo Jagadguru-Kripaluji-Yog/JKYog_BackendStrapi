@@ -4,7 +4,8 @@
   "info": {
     "singularName": "featured-event",
     "pluralName": "featured-events",
-    "displayName": "featuredEvent"
+    "displayName": "GiftShop  Featured Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,15 @@
       "type": "string"
     },
     "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "start_date": {
       "type": "date"
