@@ -64,6 +64,12 @@
       "target": "api::appannouncement.appannouncement",
       "inversedBy": "LinkedAppEvents"
     },
+    "LinkedStreams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::applivestream.applivestream",
+      "mappedBy": "LinkedEvents"
+    },
     "EventLocation": {
       "type": "enumeration",
       "required": true,
