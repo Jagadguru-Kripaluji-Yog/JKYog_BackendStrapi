@@ -23,6 +23,9 @@
     },
     "detailShortDescrption": {
       "type": "text"
+    },
+    "shortDescrption": {
+      "type": "text"
     }
   }
 }
