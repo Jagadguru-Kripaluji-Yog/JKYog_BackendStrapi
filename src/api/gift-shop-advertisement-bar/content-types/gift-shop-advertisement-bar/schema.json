@@ -22,10 +22,10 @@
       "type": "string"
     },
     "detailShortDescrption": {
-      "type": "text"
+      "type": "string"
     },
     "shortDescrption": {
-      "type": "text"
+      "type": "string"
     }
   }
 }
