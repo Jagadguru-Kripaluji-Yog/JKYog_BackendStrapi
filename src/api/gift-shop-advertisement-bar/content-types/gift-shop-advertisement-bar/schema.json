@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "gift_shop_advertisement_bars",
+  "info": {
+    "singularName": "gift-shop-advertisement-bar",
+    "pluralName": "gift-shop-advertisement-bars",
+    "displayName": "GiftShop Advertisement bar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "OfferPercents": {
+      "type": "integer"
+    },
+    "detailTitle": {
+      "type": "string"
+    },
+    "detailShortDescrption": {
+      "type": "text"
+    }
+  }
+}
