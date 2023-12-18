@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "giftshop_cookie_policies",
+  "info": {
+    "singularName": "giftshop-cookie-policy",
+    "pluralName": "giftshop-cookie-policies",
+    "displayName": "Giftshop Cookie Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

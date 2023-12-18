@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "giftshop_copyright_trademarks",
+  "info": {
+    "singularName": "giftshop-copyright-trademark",
+    "pluralName": "giftshop-copyright-trademarks",
+    "displayName": "Giftshop Copyright Trademark"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
