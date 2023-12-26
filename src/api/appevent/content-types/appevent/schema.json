@@ -40,6 +40,12 @@
     "EndTime": {
       "type": "datetime"
     },
+    "TimeZone": {
+      "type": "enumeration",
+      "required": true,
+      "default": "CST",
+      "enum": ["CST", "IST", "BST", "PST"]
+    },
     "ImageURL": {
       "type": "string",
       "required": true,
