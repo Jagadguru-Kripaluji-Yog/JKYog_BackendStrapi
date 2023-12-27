@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promocodes",
+  "info": {
+    "singularName": "promocode",
+    "pluralName": "promocodes",
+    "displayName": "Promocode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "max_uses": {
+      "type": "integer"
+    },
+    "discount_amount": {
+      "type": "float",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "fixed",
+        "percentage"
+      ],
+      "required": true
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "promocodes"
+    },
+    "transactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transaction.transaction",
+      "mappedBy": "promocode"
+    }
+  }
+}
