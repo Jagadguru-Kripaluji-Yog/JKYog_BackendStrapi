@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "transactions"
+    },
+    "promocode": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::promocode.promocode",
+      "inversedBy": "transactions"
+    },
+    "total_amount": {
+      "type": "float"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "usd",
+        "inr"
+      ]
+    },
+    "children": {
+      "type": "integer"
+    },
+    "adult": {
+      "type": "integer"
+    },
+    "senior": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "waiting_for_payment",
+        "completed",
+        "expired"
+      ],
+      "default": "waiting_for_payment"
+    },
+    "user_uuid": {
+      "type": "string",
+      "unique": false
+    },
+    "payment_id": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone_number": {
+      "type": "string"
+    }
+  }
+}

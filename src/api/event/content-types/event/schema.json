@@ -220,6 +220,24 @@
     },
     "address_field": {
       "type": "string"
+    },
+    "tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ticket.ticket",
+      "mappedBy": "event"
+    },
+    "promocodes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::promocode.promocode",
+      "mappedBy": "event"
+    },
+    "transactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transaction.transaction",
+      "mappedBy": "event"
     }
   }
 }
